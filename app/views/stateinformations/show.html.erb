@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @stateinformation.state %>
+</p>
+
+<p>
+  <strong>Asesinatos:</strong>
+  <%= @stateinformation.asesinatos %>
+</p>
+
+<p>
+  <strong>Robos:</strong>
+  <%= @stateinformation.robos %>
+</p>
+
+<p>
+  <strong>Violaciones:</strong>
+  <%= @stateinformation.violaciones %>
+</p>
+
+<p>
+  <strong>Maltrato infantil:</strong>
+  <%= @stateinformation.maltrato_infantil %>
+</p>
+
+<%= link_to 'Edit', edit_stateinformation_path(@stateinformation) %> |
+<%= link_to 'Back', stateinformations_path %>

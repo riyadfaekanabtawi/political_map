@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stateinformations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Asesinatos</th>
+      <th>Robos</th>
+      <th>Violaciones</th>
+      <th>Maltrato infantil</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stateinformations.each do |stateinformation| %>
+      <tr>
+        <td><%= stateinformation.state %></td>
+        <td><%= stateinformation.asesinatos %></td>
+        <td><%= stateinformation.robos %></td>
+        <td><%= stateinformation.violaciones %></td>
+        <td><%= stateinformation.maltrato_infantil %></td>
+        <td><%= link_to 'Show', stateinformation %></td>
+        <td><%= link_to 'Edit', edit_stateinformation_path(stateinformation) %></td>
+        <td><%= link_to 'Destroy', stateinformation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stateinformation', new_stateinformation_path %>
